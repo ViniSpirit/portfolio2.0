@@ -1,0 +1,127 @@
+.projectsContainer {
+  padding: 5rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  color: var(--preto);
+  background: var(--branco);
+}
+
+.projectsContainer > div {
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectsContainer > div > h1 {
+  text-decoration: underline;
+  text-align: center;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.images > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.images {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem 3rem;
+}
+
+.images > div {
+  background: var(--branco);
+  border-radius: 8px;
+  box-shadow: 0 0.5em 1em 0.1em rgb(10 10 10 / 13%),
+    0 0 0 1px rgb(10 10 10 / 2%);
+  /* box-shadow: 0 1px 10px 2px rgb(30 60 90 / 20%); */
+}
+
+.images > div > div > h2 {
+  color: var(--preto);
+  margin: 0;
+  font-size: 20px;
+  margin: 0.5rem 1rem;
+}
+
+.images > div > div > p {
+  margin: 0;
+  margin: 0.5rem 1rem;
+
+  font-size: 16px;
+}
+
+.description {
+  text-align: justify;
+}
+
+.images > div > div > img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0px 0px;
+  border-bottom: 1px solid rgb(30 60 90 / 20%);
+
+  /* box-shadow: 0 1px 3px 2px rgb(30 60 90 / 20%); */
+}
+
+.links {
+  align-self: start;
+  margin: 0;
+  margin: 0.5rem 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.links > a {
+  color: #9273ce;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 1rem;
+  margin-bottom: 10px;
+}
+.links > a:last-child {
+  margin-right: 0;
+}
+
+.links > a:hover {
+  color: var(--roxo);
+}
+
+@media (max-width: 1370px) {
+  .images {
+    grid-template-columns: 1fr 1fr;
+  }
+  .projectsContainer {
+    padding: 5rem 0.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .images {
+    display: block;
+  }
+  .images > div {
+    justify-content: none;
+  }
+
+  .images > div {
+    margin-bottom: 3rem;
+  }
+
+  .description {
+    text-align: start;
+  }
+  .techs {
+  }
+}
+
+@media (max-width: 500px) {
+  .projectsContainer {
+    padding: 2rem 0.5rem 0;
+  }
+}

@@ -1,0 +1,203 @@
+.homeContainer {
+  height: 50vh;
+  background: url("/images/teclado2.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--branco);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.homeContainer > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homeContainer > div .text1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+
+  animation: anime1 1.3s ease;
+}
+
+.text2 {
+  text-align: center;
+
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+
+  animation: anime1 1.3s ease;
+  overflow: hidden;
+  border-right: 0.15em solid var(--roxo);
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: anime1 1.3s ease, typing 7s steps(40, end) infinite,
+    blink-caret 0.75s step-end infinite;
+}
+
+.text3 {
+  text-align: center;
+  font-size: 1.5rem;
+
+  margin-bottom: 2rem;
+
+  animation: anime1 1.3s ease;
+}
+
+/* The typing effect */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--roxo);
+  }
+}
+
+.homeContainer .swipe {
+  position: absolute;
+
+  bottom: 5%;
+
+  animation: swipe 2s infinite;
+}
+
+.homeContainer .swipe a:hover {
+  cursor: pointer;
+}
+
+.homeContainer .follow {
+  position: absolute;
+  height: 100%;
+  background: transparent;
+  color: var(--branco);
+  left: 0;
+  padding: 0.6rem;
+
+  display: flex;
+  justify-content: center;
+
+  animation: opac 5s ease;
+}
+
+.homeContainer .follow > a {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+
+  transition: color 0.3s ease;
+}
+
+.homeContainer .follow > a:hover {
+  transform: scale(1.1);
+}
+
+@keyframes anime1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0px);
+  }
+}
+
+@keyframes opac {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes swipe {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 700px) {
+  .homeContainer > div .text1 {
+    font-size: 3rem;
+  }
+  .homeContainer > div .text2 {
+    font-size: 1.5rem;
+  }
+
+  .homeContainer > div .text3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .homeContainer .follow {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .homeContainer {
+    height: 45vh;
+  }
+  .homeContainer > div .text1 {
+    font-size: 1.8rem;
+  }
+
+  .homeContainer > div .text2 {
+    font-size: 1rem;
+  }
+
+  .homeContainer > div .text3 {
+    font-size: 1rem;
+  }
+  .homeContainer .swipe {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .homeContainer > div .text1 {
+    font-size: 1.5rem;
+  }
+  .homeContainer > div .text2 {
+    font-size: 0.8rem;
+  }
+
+  .homeContainer > div .text3 {
+    font-size: 0.8rem;
+  }
+}

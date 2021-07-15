@@ -1,0 +1,167 @@
+.mainContainer {
+}
+
+.mainContainer > header {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  color: var(--branco);
+  display: flex;
+  justify-content: center;
+  z-index: 998;
+
+  transition: all 0.4s ease;
+}
+
+.mainContainer .headerFaded {
+  background: var(--branco);
+  color: var(--preto);
+  z-index: 1;
+}
+
+.mainContainer > header > nav {
+  width: 100%;
+}
+
+.mainContainer > header > nav > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+}
+
+.mainContainer > header > nav > ul li {
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+  font-size: 1.3rem;
+}
+
+.mainContainer > header > nav > ul li:last-child {
+  margin-right: 0;
+}
+
+.active,
+.mainContainer > header > nav > ul li a:hover {
+  cursor: pointer;
+  color: var(--roxo);
+  text-decoration: underline;
+}
+
+.mainContainer > header > button {
+  align-self: flex-start;
+  background: var(--roxo);
+  cursor: pointer;
+
+  outline: 0;
+  border: 0;
+  width: 3rem;
+  height: 3rem;
+
+  display: none;
+}
+
+.mainContainer > footer {
+  background: var(--preto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 4rem 0;
+}
+.mainContainer > footer > div {
+  display: flex;
+  justify-content: center;
+}
+
+.mainContainer > footer > div > div {
+  margin-right: 5rem;
+}
+.mainContainer > footer > div > div:last-child {
+  margin-right: 0;
+}
+
+.sobre > div {
+  color: var(--branco);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.sobre > p {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav > div {
+  color: var(--branco);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.nav > a {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.nav > a:last-child {
+  margin-bottom: 1rem;
+}
+
+.nav > a:hover {
+  cursor: pointer;
+  color: var(--branco);
+}
+
+.follow > div:first-child {
+  color: var(--branco);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.links > a {
+  color: grey;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.links > a:last-child {
+  margin-right: 0;
+}
+
+.links > a:hover {
+  color: var(--branco);
+}
+
+@media (max-width: 1000px) {
+  .mainContainer .headerFaded {
+    background: transparent;
+  }
+
+  .mainContainer > header > nav > ul {
+    display: none;
+  }
+
+  .mainContainer > header > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mainContainer > footer > div {
+    flex-direction: column;
+    text-align: center;
+  }
+  .mainContainer > footer > div > div {
+    margin-right: 0;
+  }
+}

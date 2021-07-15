@@ -1,0 +1,85 @@
+.aboutContainer {
+  padding: 5rem 2rem;
+
+  display: flex;
+  justify-content: center;
+
+  color: var(--preto);
+  background: var(--branco);
+}
+
+.aboutContainer > div > h1 {
+  text-decoration: underline;
+
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.aboutContent {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.aboutContent > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  filter: drop-shadow(0 5px 3px #000);
+  margin-right: 2rem;
+}
+
+.aboutDescription > div {
+}
+
+.aboutDescription > div > h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--roxo);
+}
+
+.aboutDescription > p {
+  max-width: 700px;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.aboutContent > div > form > button {
+  background: var(--roxo);
+  color: var(--branco);
+
+  height: 2.5rem;
+  width: 7rem;
+  font-size: 1.1rem;
+  border: 0;
+  border-radius: 4px;
+
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.aboutContent > div > form > button:hover {
+  background: transparent;
+  color: var(--roxo);
+  border: 2px solid var(--roxo);
+}
+
+@media (max-width: 1000px) {
+  .aboutContainer {
+    padding: 3rem 0.5rem;
+  }
+  .aboutContent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutContent > img {
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .aboutDescription > div {
+    text-align: center;
+  }
+}

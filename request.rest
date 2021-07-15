@@ -1,0 +1,9 @@
+POST http://localhost:3000/api/email
+Content-Type: application/json
+
+{
+ "name": "Marcos Vinicius",
+ "from": "test@test.com",
+ "title": "contrataçao",
+ "content": "ola 2"
+}

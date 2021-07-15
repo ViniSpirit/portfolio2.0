@@ -1,0 +1,67 @@
+.menuContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  color: var(--preto);
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuContainer > div {
+  position: absolute;
+  background: var(--preto);
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 0 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuContainer > div > a {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--branco);
+}
+
+.menuContainer > ul {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.menuContainer > ul > a {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+
+  transition: color 0.3s ease;
+}
+
+.menuContainer > ul > a:hover {
+  color: var(--roxo);
+}
+
+.menuContainer > button {
+  position: absolute;
+  background: var(--roxo);
+  color: var(--branco);
+  cursor: pointer;
+
+  outline: 0;
+  font-size: 1.3rem;
+  width: 2.8rem;
+  height: 3rem;
+
+  border: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
