@@ -1,8 +1,31 @@
-import stylesP from "../styles/projects.module.css";
+import stylesP from "../styles/projects.module.css"
 
 function Projects() {
   return (
     <div className={stylesP.images}>
+      {/* project 0 */}
+      <div>
+        <div>
+          <img src="/projects/movies/movies.png" alt="" />
+          <h2>Movies</h2>
+          <p className={stylesP.description}>
+            <strong>Descrição:</strong> App para pesquisar filmes utilizando a
+            the movie db API.
+          </p>
+          <p className={stylesP.techs}>
+            <strong>Techs:</strong> NextJS, The Movie DB API, Custom Hooks, CSS.
+          </p>
+        </div>
+        <div className={stylesP.links}>
+          <a href="https://movies-gules.vercel.app/" target="_blank">
+            Link <i className="fas fa-external-link-alt" aria-hidden="true"></i>
+          </a>
+          <a href="javascript:void(0)" target="_blank">
+            Github <i className="fab fa-github" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
       {/* project 1 */}
 
       <div>
@@ -133,7 +156,7 @@ function Projects() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Projects;
+export default Projects
